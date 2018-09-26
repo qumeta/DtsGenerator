@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bond.CSharp" Version="8.0.0" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <!-- Use dotnet to execute the process. -->
+    <!--<Exec Command="dotnet - - help" />-->
+
+    <!--<Copy SourceFiles="data_types.d.ts" DestinationFiles = "..\..\..\client\game\src\game\data_types.d.ts" />
+    <Copy SourceFiles="message_types.d.ts" DestinationFiles = "..\..\..\client\game\src\game\message_types.d.ts" />
+  -->
+  </Target>
+
+</Project>

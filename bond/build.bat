@@ -1,0 +1,1 @@
+for /r . %%h in (*.bond) do gbc-8.0.0-amd64.exe c# %%h -o=..\Game.Models\

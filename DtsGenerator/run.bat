@@ -1,0 +1,1 @@
+dotnet DtsGenerator.dll --name=game_dev

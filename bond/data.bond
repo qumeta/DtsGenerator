@@ -1,0 +1,35 @@
+namespace Game.Models
+
+// 道具类别
+enum EnumItemType
+{
+	TypeNone,
+	Type1,        		
+	Type2,        		
+	Type3,        		
+	Type4,        		
+	Type5,        		
+	Type6,        		
+	Type7,        		
+	Max
+}
+
+// 
+struct DataItem
+{
+	0: int32 id;
+	1: string title;
+	2: EnumItemType type = TypeNone;
+	3: vector<int32> attrs;
+	4: int64 end;
+}
+
+struct DataGrainState
+{
+	0: vector<DataItem> item1s;
+	1: map<int32, DataItem> item2s;
+	2: vector<int32> attrs;
+}
+
+
+

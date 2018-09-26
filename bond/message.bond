@@ -1,0 +1,15 @@
+import "data.bond"
+
+namespace Game.Models
+
+// 玩家消息
+struct Message
+{
+    0: EnumItemType ret = TypeNone;
+}
+
+// 
+struct MsgTest : Message
+{
+	0: DataItem item;
+}
