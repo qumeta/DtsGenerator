@@ -2,7 +2,7 @@
   "profiles": {
     "DtsGenerator": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\Item\\youigame\\trunk\\tools\\DtsGenerator\\Game.Models\\Game.Models.csproj C:\\Item\\youigame\\trunk\\tools\\DtsGenerator\\bond\\ts"
+      "commandLineArgs": "C:\\Item\\github\\garden\\server\\game\\Game.Models\\Game.Models.csproj C:\\Item\\github\\garden\\design\\bond\\ts"
     }
   }
 }

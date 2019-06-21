@@ -2,35 +2,19 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bond.CSharp" Version="8.0.0" />
-    <PackageReference Include="Buildalyzer" Version="1.0.0" />
-    <PackageReference Include="Buildalyzer.Workspaces" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="15.8.166" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.8.2" />
+    <PackageReference Include="Bond.CSharp" Version="8.1.0" />
+    <PackageReference Include="Buildalyzer" Version="2.3.0" />
+    <PackageReference Include="Buildalyzer.Workspaces" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="16.0.461" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DataStructures\DataStructures.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="message_types.cs">
-      <Generator>DtsGenerator</Generator>
-      <LastGenOutput>message_types.d.ts</LastGenOutput>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="message_types.d.ts">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>message_types.cs</DependentUpon>
-    </None>
   </ItemGroup>
 
 </Project>
