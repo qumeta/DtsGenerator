@@ -11,9 +11,13 @@ namespace DtsGenerator.Helpers
         {
             var assemblyName = typeSymbol.ContainingAssembly.Name;
 
-            //netstandard
-            if (assemblyName == "mscorlib" || assemblyName.StartsWith("System"))
-            //if (assemblyName == "netstandard" || assemblyName == "mscorlib" || assemblyName.StartsWith("System"))
+            //Type t;
+            //t.IsPrimitive
+
+            // netcoreapp3.0
+            // netstandard兼容
+            //if (assemblyName == "mscorlib" || assemblyName.StartsWith("System"))
+            if (assemblyName == "netstandard" || assemblyName == "mscorlib" || assemblyName.StartsWith("System"))
             {
                 if (typeSymbol.MetadataName == SupportedDotNetTypes.KeyValuePair)
                 {
