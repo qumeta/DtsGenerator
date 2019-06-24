@@ -1,1 +1,1 @@
-dotnet publish --configuration=Release
+dotnet publish -r win-x64 -c release

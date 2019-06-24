@@ -69,7 +69,8 @@ namespace DtsGenerator.UseCases.Features
 
 
             // import { EnumProtocol } from './enums';
-            classAllContents.AppendLine($"import {{ {string.Join(',', enumNameList)} }} from './enums';");
+            classAllContents.AppendLine($"import {{ {string.Join(", ", enumNameList)} }} from './enums';");
+            classAllContents.AppendLine($"export {{ {string.Join(", ", enumNameList)} }} from './enums';");
             classAllContents.AppendLine();
 
             foreach (var tsModel in tsClassModels)
@@ -81,10 +82,6 @@ namespace DtsGenerator.UseCases.Features
                 //new TsGenerator().GenerateDataModelAST(tsModel, _outputPath);
                 classAllContents.AppendLine(generator.GenerateClassData(tsModel));
             }
-
-            //export * from "./enums";
-            classAllContents.AppendLine("export * from './enums';");
-            classAllContents.AppendLine();
 
             emitter.EmitAll(_outputPath, EmittedFileType.Model, classAllContents.ToString());
 
