@@ -19,15 +19,15 @@ namespace DtsGenerator.Generators
 
             var typeGenerator = new TypeGenerator();
 
-            // TODO egret项目再试不要用import，并且加上module
+            // TODO egret项目暂时不要用import，并且加上module
             // imports
-            // GenerateImportDeclarations(classModel.Imports, sb);
+            GenerateImportDeclarations(classModel.Imports, sb);
 
-            sb.AppendLine("declare module server {");
+            //sb.AppendLine("declare module server {");
 
             // class declaration
-            //sb.AppendLine("export class "
-            sb.AppendLine("interface "
+            sb.AppendLine("export interface "
+            //sb.AppendLine("interface "
                 + classModel.Name
                 + (classModel.IsGeneric ? $"<{GenerateTypeParameters(classModel.TypeParameters)}>" : "")
                 + (string.IsNullOrEmpty(classModel.BaseClass) ? "" : " extends " + classModel.BaseClass)
@@ -49,7 +49,7 @@ namespace DtsGenerator.Generators
             sb.AppendLine("}");
 
             // module
-            sb.AppendLine("}");
+            //sb.AppendLine("}");
 
             return sb.ToString();
         }
@@ -64,11 +64,11 @@ namespace DtsGenerator.Generators
             }
 
             // enums have no imports
-            sb.AppendLine("declare module server {");
+            //sb.AppendLine("declare module server {");
 
             // enum declaration
-            //sb.AppendLine("export enum " + enumModel.Name + " {");
-            sb.AppendLine("const enum " + enumModel.Name + " {");
+            sb.AppendLine("export enum " + enumModel.Name + " {");
+            //sb.AppendLine("const enum " + enumModel.Name + " {");
 
             // members
             for (int i = 0; i < enumModel.Members.Count; i++)
@@ -84,7 +84,7 @@ namespace DtsGenerator.Generators
             sb.AppendLine("}");
 
             // module
-            sb.AppendLine("}");
+            //sb.AppendLine("}");
 
             return sb.ToString();
         }
