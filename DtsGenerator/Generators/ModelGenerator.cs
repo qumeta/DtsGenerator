@@ -56,7 +56,9 @@ namespace DtsGenerator.Generators
             var sb = new StringBuilder();
 
             // enum declaration
-            sb.AppendLine("export enum " + enumModel.Name + " {");
+            //sb.AppendLine("export enum " + enumModel.Name + " {");
+            // const
+            sb.AppendLine("const enum " + enumModel.Name + " {");
 
             // members
             for (int i = 0; i < enumModel.Members.Count; i++)
